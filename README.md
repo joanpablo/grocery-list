@@ -15,7 +15,7 @@ This command will deploy three docker containers:
 
 - **grocery-list-app** (Nginx server hosting the Angular application through port **81**)
 - **grocery-list-api** (A Java based container running the Spring Boot application and listening through port **82**)
-- **grocery-list-db** (The MongoDb server)
+- **grocery-list-db** (The MySQL server)
 
 The file **_docker-compose.yml_** contains the configuration for deploy the containers.
 
