@@ -10,7 +10,7 @@ services:
     ports:
       - 81:80
     depends_on:
-      - grocery-list-api
+      - "grocery-list-api"
 
   grocery-list-api:
     image: grocery-list-api:latest
@@ -20,9 +20,18 @@ services:
     ports:
       - 82:8080
     depends_on:
-      - grocery-list-db
+      grocery-list-db:
+        condition: service_healthy
 
   grocery-list-db:
     image: mysql:8.0.27
     ports:
       - 3306:3306
+    environment:
+      - MYSQL_DATABASE=grocery
+      - MYSQL_ROOT_PASSWORD=root
+    healthcheck:
+      test: "/usr/bin/mysql --user=root --password=root --execute \"SHOW DATABASES;\""
+      interval: 2s
+      timeout: 20s
+      retries: 10
