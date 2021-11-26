@@ -1,0 +1,6 @@
+[submodule "grocery-list-api"]
+	path = grocery-list-api
+	url = https://github.com/joanpablo/grocery-list-api.git
+[submodule "grocery-list-app"]
+	path = grocery-list-app
+	url = https://github.com/joanpablo/grocery-list-app.git
