@@ -13,9 +13,9 @@ docker-compose up
 
 This command will deploy three docker containers:
 
-- **gateway-web-app** (Nginx server hosting the Angular application through port **81**)
-- **gateway-web-services** (A Java based container running the Spring Boot application and listening through port **82**)
-- **mongodb** (The MongoDb server)
+- **grocery-list-app** (Nginx server hosting the Angular application through port **81**)
+- **grocery-list-api** (A Java based container running the Spring Boot application and listening through port **82**)
+- **grocery-list-db** (The MongoDb server)
 
 The file **_docker-compose.yml_** contains the configuration for deploy the containers.
 
@@ -24,5 +24,5 @@ After run the command line docker-compose open a browser in URL **_http://localh
 The Angular app and the Spring Boot app are build and deploy within the containers using the multistage feature of Docker.
 The docker files for each project are:
 
-- Angular project in: **_/gateways-client/Dockerfile_**
+- Angular project in: **_/grocery-list-app/Dockerfile_**
 - Spring Boot project in: **_Dockerfile_**
