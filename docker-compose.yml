@@ -1,0 +1,28 @@
+version: "3.0"
+
+services:
+
+  grocery-list-app:
+    image: grocery-list-app:latest
+    build:
+      context: ./grocery-list-app
+      dockerfile: ./Dockerfile
+    ports:
+      - 81:80
+    depends_on:
+      - grocery-list-api
+
+  grocery-list-api:
+    image: grocery-list-api:latest
+    build:
+      context: ./grocery-list-api
+      dockerfile: ./Dockerfile
+    ports:
+      - 82:8080
+    depends_on:
+      - grocery-list-db
+
+  grocery-list-db:
+    image: mysql:8.0.27
+    ports:
+      - 3306:3306
