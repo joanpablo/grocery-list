@@ -25,4 +25,4 @@ The Angular app and the Spring Boot app are build and deploy within the containe
 The docker files for each project are:
 
 - Angular project in: **_/grocery-list-app/Dockerfile_**
-- Spring Boot project in: **_Dockerfile_**
+- Spring Boot project in: **_/grocery-list-api/Dockerfile_**
