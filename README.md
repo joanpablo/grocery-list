@@ -2,18 +2,22 @@
 
 This Repository is the main repository that contains 2 **git submodules** projects:
 
-- **grocery-list-app**: an [Angular](https://angular.io/) application
-- **grocery-list-api**: a [Spring Boot](https://spring.io/) Restful services
+| Project                                                               | Description                                          | Build                                                                                                                                           |
+| --------------------------------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**grocery-list-app**](https://github.com/joanpablo/grocery-list-app) | an [Angular](https://angular.io/) application        | ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/joanpablo/grocery-list-app/grocery-list/master?style=flat)     |
+| [**grocery-list-api**](https://github.com/joanpablo/grocery-list-api) | a [Spring Boot](https://spring.io/) Restful services | ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/joanpablo/grocery-list-api/grocery-list-api/master?style=flat) |
 
-Both projects comforms the **Grocery List Application**: Frontend, and Backend.
+Both projects are parts of the **Grocery List Application**: Frontend, and Backend.
 
-## Build & Deploy with Docker
+## Steps to Run and Deploy locally
 
-You can run and deploy the project locally only with [Docker](https://www.docker.com/), nothing else is needed, not gradle, not nodejs, just Docker and _docker-compose_.
+1. Clone the repository
+2. Run docker-compose
+3. Open the web browser
 
-### Clone repository
+> As a requeriment you need to have installed [Docker](https://www.docker.com/products/docker-desktop) in your environment.
 
-First clone the repository:
+### 1. Clone repository
 
 ```shell
 git clone https://github.com/joanpablo/grocery-list.git
@@ -25,15 +29,13 @@ Then enter the root folder:
 cd grocery-list
 ```
 
-### Execute Docker Compose
+### 2. Run **docker-compose**
 
-And execute the following command:
+You can run and deploy the project locally only with [Docker](https://www.docker.com/), nothing else is needed, not gradle, not nodejs, just Docker and _docker-compose_.
 
 ```shell script
 docker-compose up
 ```
-
-> As a requeriment you need to have installed [Docker](https://www.docker.com/products/docker-desktop) in your environment.
 
 This command will deploy three docker containers:
 
@@ -49,6 +51,6 @@ The docker files for each project are:
 - Angular project in: **_/grocery-list-app/Dockerfile_**
 - Spring Boot project in: **_/grocery-list-api/Dockerfile_**
 
-## Open Web Browser
+### 3. Open the web browser
 
 After running the command **docker-compose**, open a browser in the URL **_http://localhost:81_** to access the Grocery List Web Application.
